@@ -1,0 +1,11 @@
+<body>
+{%  set file_name=filename %}
+<form role="form" action="/update/" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <button type="submit" class="btn btn-danger">提交</button>
+         <input name="files" type="file"/>
+    </div>
+</form>
+<img  alt="图片丢失了" onerror="this.src='http://img0.imgtn.bdimg.com/it/u=3652728881,2226869891&fm=26&gp=0.jpg'" 
+style="width: 500px; height: 500px;" src="{{ url_for('static2',filename='source.png')}}">
+</body>

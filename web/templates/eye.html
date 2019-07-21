@@ -1,0 +1,40 @@
+<body>
+<h1>Dection Demo of Diabetic retinopathy</h1>
+<div class="span9">
+<p>Please upload image and get the diagnosis: </p>
+{%  set file_name=filename %}
+<img  alt="图片丢失了" onerror="this.src='http://img0.imgtn.bdimg.com/it/u=3652728881,2226869891&fm=26&gp=0.jpg'" 
+style="width: 300px; height: 300px;" src="{{ url_for('static2',filename=file_name) }}">
+<form role="form" action="/update/" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <button type="submit" class="btn btn-danger">upload and diagnoise</button>
+         <input name="files" type="file"/>
+    </div>
+</form>
+
+<p> Severity of DR :    {{ score }} </p>
+
+<p>---------------------------------</p>
+<p>severity of diabetic retinopathy<p>
+<p>0 - No DR </p>
+<p>1 - Mild</p>
+<p>2 - Moderate</p>
+<p>3 - Severe</p>
+<p>4 - Proliferative DR</p>
+<p>4 - Proliferative DR</p>
+<p>---------------------------------</p>
+</div>
+
+<div class="spc-rightsidebar span3">
+
+<aside><h4>Healthy case(0):</h4>
+<img  alt="图片丢失了" onerror="this.src='http://img0.imgtn.bdimg.com/it/u=3652728881,2226869891&fm=26&gp=0.jpg'" 
+style="width: 300px; height: 300px;" src="{{ url_for('static2',filename='healthy.png') }}">
+
+<h4>Proliferative DR(4):</h4>
+<img  alt="图片丢失了" onerror="this.src='http://img0.imgtn.bdimg.com/it/u=3652728881,2226869891&fm=26&gp=0.jpg'" 
+style="width: 300px; height: 300px;" src="{{ url_for('static2',filename='bad.png') }}"></aside> 
+</div>
+
+
+</body>
